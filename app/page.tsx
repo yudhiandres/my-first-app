@@ -1,101 +1,215 @@
+import {
+  ArrowUpRight,
+  Camera,
+  Code2,
+  Cpu,
+} from "lucide-react";
+import Image from "next/image";
+
 export default function Home() {
   return (
-    <main>
-      <nav className="flex justify-between items-center p-6 shadow">
-        <h1 className="text-2xl font-bold">
-          MyCompany
+    <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
+
+      {/* NAVBAR */}
+      <nav className="flex items-center justify-between border-b border-black/10 px-6 py-5 md:px-12">
+        <h1 className="text-2xl font-black tracking-tighter">
+          Yudhi C Andres<span className="text-lime-600"> .</span>
         </h1>
-        <ul className="flex gap-6">
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+
+        <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      
-      <section className="text-center py-24">
-        <h1 className="text-5xl font-bold mb-6">
-          Build Modern Web Apps
-        </h1>
 
-        <p className="text-gray-600 text-lg mb-8">
-          Membuat aplikasi web modern menggunakan
-          Next.js dan Tailwind CSS.
-        </p>
+      {/* HERO */}
+      <section
+        id="home"
+        className="grid min-h-[650px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-12"
+      >
+        <div>
+          <p className="mb-5 font-mono text-xs tracking-[0.25em] text-lime-700">
+            INDUSTRIAL SOFTWARE / AI VISION
+          </p>
 
-        <div className="flex justify-center gap-4">
-          <button className="bg-blue-600 text-white px-6 py-3 rounded-lg">
-            Get Started
-          </button>
-
-          <button className="border px-6 py-3 rounded-lg">
-            Learn More
-          </button>
-        </div>
-      </section>
-      <section className="py-20 bg-gray-100">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Features
+          <h2 className="text-5xl font-black leading-[1.05] tracking-tighter md:text-7xl">
+            Making machines
+            <br />
+            <span className="italic text-lime-700">
+              see smarter.
+            </span>
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="font-bold text-xl mb-3">
-                ⚡ Fast
-              </h3>
-              <p>
-                Dibangun menggunakan teknologi modern.
-              </p>
-            </div>
+          <p className="mt-7 max-w-lg leading-8 text-gray-600">
+            Saya mengembangkan solusi software dan Artificial
+            Intelligence untuk kebutuhan industri, mulai dari
+            computer vision, inspeksi visual, hingga monitoring
+            performa AI.
+          </p>
 
-            <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="font-bold text-xl mb-3">
-                🎨 Modern
-              </h3>
-              <p>
-                Tampilan elegan dan responsif.
-              </p>
-            </div>
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="flex items-center gap-2 bg-[#171816] px-6 py-4 text-sm font-bold text-white transition hover:bg-lime-700"
+            >
+              Lihat Project <ArrowUpRight size={18} />
+            </a>
 
-            <div className="bg-white p-6 rounded-xl shadow">
-              <h3 className="font-bold text-xl mb-3">
-                🔒 Secure
-              </h3>
-              <p>
-                Dibangun dengan best practice keamanan.
-              </p>
-            </div>
+            <a
+              href="#contact"
+              className="border border-black/20 px-6 py-4 text-sm font-bold transition hover:bg-black hover:text-white"
+            >
+              Hubungi Saya
+            </a>
           </div>
         </div>
+
+        {/* VISUAL */}
+        <div className="relative min-h-[350px] overflow-hidden bg-[#20231f] text-lime-300 md:min-h-[450px]">
+          <Image
+            src="/obj_det.gif"
+            alt="Yudhi C Andres"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-contain"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/30" />
+
+          <span className="absolute left-5 top-5 font-mono text-xs">
+            COMPUTER VISION
+          </span>
+
+          <span className="absolute bottom-5 right-5 font-mono text-xs">
+            SYSTEM ONLINE
+          </span>
+        </div>
       </section>
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-3xl font-bold mb-6">
-            About Us
+
+      {/* ABOUT */}
+      <section id="about" className="px-6 py-20 md:px-12">
+        <p className="font-mono text-xs tracking-widest text-lime-700">
+          01 / ABOUT ME
+        </p>
+
+        <div className="mt-8 grid gap-8 md:grid-cols-2">
+          <h2 className="text-4xl font-black tracking-tighter md:text-5xl">
+            Engineering mindset.
+            <br />
+            Practical solutions.
           </h2>
 
-          <p className="text-gray-600">
-            Kami membantu bisnis membangun aplikasi
-            web modern menggunakan Next.js dan
-            teknologi terbaru.
+          <p className="max-w-xl leading-8 text-gray-600">
+            Berpengalaman lebih dari 10 tahun di dunia kerja,
+            dengan fokus pengembangan solusi teknologi yang
+            menjawab kebutuhan nyata. Saya tertarik pada
+            pengembangan aplikasi, computer vision, integrasi
+            sistem, serta peningkatan efisiensi proses industri.
           </p>
         </div>
       </section>
-      <section className="bg-blue-600 text-white py-20">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">
-            Siap Memulai Project Anda?
-          </h2>
 
-          <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold">
-            Hubungi Kami
-          </button>
+      {/* PROJECTS */}
+      <section id="projects" className="bg-[#20231f] px-6 py-20 text-white md:px-12">
+        <p className="font-mono text-xs tracking-widest text-lime-300">
+          02 / SELECTED PROJECTS
+        </p>
+
+        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-6xl">
+          Work that matters.
+        </h2>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="border border-white/15 p-7 transition hover:border-lime-300">
+            <Camera className="mb-6 text-lime-300" size={32} />
+            <h3 className="text-xl font-bold">SpecVision Inspect</h3>
+            <p className="mt-4 text-sm leading-7 text-gray-400">
+              Sistem inspeksi visual berbasis kamera dan AI
+              untuk kebutuhan manufaktur.
+            </p>
+          </div>
+
+          <div className="border border-white/15 p-7 transition hover:border-lime-300">
+            <Code2 className="mb-6 text-lime-300" size={32} />
+            <h3 className="text-xl font-bold">SpecVision Configurator</h3>
+            <p className="mt-4 text-sm leading-7 text-gray-400">
+              Aplikasi desktop untuk mengelola konfigurasi
+              produk, kamera, template, dan model AI.
+            </p>
+          </div>
+
+          <div className="border border-white/15 p-7 transition hover:border-lime-300">
+            <Cpu className="mb-6 text-lime-300" size={32} />
+            <h3 className="text-xl font-bold">AI Performance</h3>
+            <p className="mt-4 text-sm leading-7 text-gray-400">
+              Monitoring akurasi deteksi, utilisasi kamera,
+              tren inspeksi, dan kesalahan hasil pemeriksaan.
+            </p>
+          </div>
         </div>
       </section>
 
-      <footer className="text-center py-6">
-        © 2026 MyCompany. All Rights Reserved.
+      {/* SKILLS */}
+      <section className="px-6 py-20 md:px-12">
+        <p className="font-mono text-xs tracking-widest text-lime-700">
+          03 / TECHNOLOGY
+        </p>
+
+        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-5xl">
+          Tools I work with.
+        </h2>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          {[
+            "Python",
+            "PyQt5",
+            "OpenCV",
+            "YOLO",
+            "ONNX",
+            "SQLite",
+            "Next.js",
+            "REST API",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="border border-black/15 px-5 py-3 font-mono text-sm transition hover:bg-lime-300"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="bg-[#d7ff4f] px-6 py-20 text-center">
+        <p className="font-mono text-xs tracking-widest">
+          04 / CONTACT
+        </p>
+
+        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-6xl">
+          Let&apos;s build something
+          <br />
+          meaningful.
+        </h2>
+
+        <p className="mx-auto mt-5 max-w-lg text-gray-700">
+          Terbuka untuk diskusi seputar industrial AI,
+          computer vision, software engineering, dan peluang
+          kolaborasi.
+        </p>
+
+        <a
+          href="mailto:emailanda@example.com"
+          className="mt-8 inline-flex items-center gap-3 bg-[#171816] px-7 py-4 font-bold text-white transition hover:bg-white hover:text-black"
+        >
+          Hubungi Saya <ArrowUpRight size={18} />
+        </a>
+      </section>
+
+      <footer className="px-6 py-7 text-center text-sm text-gray-500">
+        © 2026 AA. Built with Next.js.
       </footer>
-    </main> 
+    </main>
   );
 }

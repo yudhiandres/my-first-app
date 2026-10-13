@@ -1,0 +1,16 @@
+{
+  "changelists": [
+    {
+      "name": "Default",
+      "files": [
+        "app/page.tsx",
+        "package.json",
+        "pnpm-lock.yaml",
+        ".vscode/changelists.json",
+        "public/obj_det.png",
+        "public/obj_det.gif"
+      ]
+    }
+  ],
+  "active": "Default"
+}
