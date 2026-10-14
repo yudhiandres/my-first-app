@@ -3,18 +3,40 @@ import {
   Camera,
   Code2,
   Cpu,
+  Download,
 } from "lucide-react";
+import {
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+  FaWhatsapp,
+} from "react-icons/fa";
 import Image from "next/image";
+import ProfessionalGrowth from "@/components/ProfessionalGrowth";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
 
       {/* NAVBAR */}
-      <nav className="flex items-center justify-between border-b border-black/10 px-6 py-5 md:px-12">
-        <h1 className="text-2xl font-black tracking-tighter">
-          Yudhi C Andres<span className="text-lime-600"> .</span>
-        </h1>
+      <nav className="flex items-center justify-between border-b border-black/10 px-6 py-5 md:px-12 relative z-50">
+        <div className="mb-1 flex items-center gap-3">
+          <p className="text-base font-bold uppercase tracking-[0.15em] text-gray-500">
+            Curriculum Vitae | 
+          </p>
+
+          <a
+            href="https://wa.me/6282223331149"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+            className="text-gray-600 transition hover:text-lime-700"
+          >
+            <FaWhatsapp size={24} />
+          </a>
+
+          
+        </div>
 
         <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
           <li><a href="#home">Home</a></li>
@@ -23,6 +45,116 @@ export default function Home() {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
+
+      {/* HERO */}
+      <section
+        id="home"
+        className="grid min-h-[650px] items-center gap-10 px-6 py-10 md:grid-cols-2 md:px-12"
+      >
+        <div>
+          <h3 className="text-xl font-bold text-lime-800">Hallo, kenalkan saya</h3>
+          
+
+          <h2 className="text-5xl font-black leading-[1.05] tracking-tighter md:text-7xl">
+            Yudhi C{" "} 
+            
+            <span className="text-lime-700">
+               Andres
+            </span>
+          </h2>
+
+          <p className="mb-8 font-mono text-xs tracking-[0.25em] text-lime-700">
+            QUALITY CONTROL / INDUSTRIAL SOLUTIONS ENGINEER
+          </p>
+
+          <p className="mt-9 max-w-lg leading-8 text-gray-600">
+            Berpengalaman lebih dari 19 tahun di dunia manufaktur otomotif,
+            dengan 5 tahun terakhir fokus pengembangan solusi teknologi yang
+            menjawab kebutuhan nyata. Saya tertarik pada
+            pengembangan aplikasi, computer vision, integrasi
+            sistem, serta peningkatan efisiensi proses industri.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#projects"
+              className="flex items-center gap-2 bg-[#171816] px-6 py-4 text-sm font-bold text-white transition hover:bg-lime-700"
+            >
+              Download CV <Download size={18} />
+            </a>
+
+          </div>
+
+          <div className="mt-10">
+          <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-gray-500">
+            Follow me on social media
+          </p>
+
+          <div className="flex items-center gap-5">
+              <a
+                href="https://www.linkedin.com/in/username/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                className="text-gray-600 transition hover:-translate-y-1 hover:text-lime-700"
+              >
+                <FaLinkedinIn size={24} />
+              </a>
+
+              <a
+                href="https://github.com/username"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                className="text-gray-600 transition hover:-translate-y-1 hover:text-lime-700"
+              >
+                <FaGithub size={24} />
+              </a>
+
+              <a
+                href="https://www.instagram.com/username/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-gray-600 transition hover:-translate-y-1 hover:text-lime-700"
+              >
+                <FaInstagram size={24} />
+              </a>
+            </div>
+          </div>
+          
+        </div>
+
+      
+
+        {/* VISUAL */}
+       
+      <div className="relative w-[600px] h-[800px] mx-auto">
+
+        <div className="absolute inset-0 flex items-center justify-center z-0">
+
+          
+
+          {/* Rectangle lime depan */}
+          <div className="absolute w-100 h-800 bg-lime-700 rotate-0 opacity-90 z-10 pointer-events-none" />
+
+        </div>
+
+        {/* Foto profil */}
+        <Image
+          src="/photo_profile4.png"
+          alt="Yudhi C Andres"
+          fill
+          sizes="(max-width: 900px) 100vw, 50vw"
+          className="object-contain relative x-2 y-20 z-10"
+          priority
+        />
+
+      </div>
+        
+      </section>
+
+     <ProfessionalGrowth />
 
       {/* HERO */}
       <section
@@ -101,8 +233,8 @@ export default function Home() {
           </h2>
 
           <p className="max-w-xl leading-8 text-gray-600">
-            Berpengalaman lebih dari 10 tahun di dunia kerja,
-            dengan fokus pengembangan solusi teknologi yang
+            Berpengalaman lebih dari 19 tahun di dunia manufaktur otomotif,
+            dengan 5 tahun terakhir fokus pengembangan solusi teknologi yang
             menjawab kebutuhan nyata. Saya tertarik pada
             pengembangan aplikasi, computer vision, integrasi
             sistem, serta peningkatan efisiensi proses industri.
