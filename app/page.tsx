@@ -19,7 +19,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
 
       {/* NAVBAR */}
-      <nav className="flex items-center justify-between border-b border-black/10 px-6 py-5 md:px-12 relative z-50">
+      <nav className="flex items-center justify-between border-b border-black/10 px-  6 py-5 md:px-12 relative z-50">
         <div className="mb-1 flex items-center gap-3">
           <p className="text-base font-bold uppercase tracking-[0.15em] text-gray-500">
             Curriculum Vitae | 
@@ -38,12 +38,13 @@ export default function Home() {
           
         </div>
 
-        <ul className="hidden items-center gap-8 text-sm font-medium md:flex">
+        <ul className="hidden items-center gap-10 text-sm font-medium md:flex">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+        
       </nav>
 
       {/* HERO */}
@@ -59,7 +60,7 @@ export default function Home() {
             Yudhi C{" "} 
             
             <span className="text-lime-700">
-               Andres
+              Andres
             </span>
           </h2>
 
@@ -128,15 +129,13 @@ export default function Home() {
       
 
         {/* VISUAL */}
-       
       <div className="relative w-[600px] h-[800px] mx-auto">
 
         <div className="absolute inset-0 flex items-center justify-center z-0">
 
-          
-
           {/* Rectangle lime depan */}
-          <div className="absolute w-100 h-800 bg-lime-700 rotate-0 opacity-90 z-10 pointer-events-none" />
+          <div className="absolute top-0 w-100 h-170 bg-lime-700 rotate-0 opacity-90 z-10 y-5 pointer-events-none" />
+
 
         </div>
 
@@ -154,7 +153,7 @@ export default function Home() {
         
       </section>
 
-     <ProfessionalGrowth />
+      <ProfessionalGrowth />
 
       {/* HERO */}
       <section

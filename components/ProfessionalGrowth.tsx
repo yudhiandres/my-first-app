@@ -1,32 +1,48 @@
 
 const growthStages = [
   {
-    number: "2005",
-    period: "Foundation",
+    Period: "2005",
+    position: "Graduated From High School",
     title: "Industrial Experience",
     description:
       "Building a strong understanding of industrial processes, quality standards, and manufacturing needs.",
     status: "Experience",
   },
   {
-    number: "2007",
-    period: "Sampling Inspector",
+    Period: "2007",
+    position: "Sampling Inspector",
     title: "Industrial Software",
     description:
       "Developing and integrating software solutions for ATS workflows and production inspection systems.",
     status: "Experience",
   },
   {
-    number: "2009",
-    period: "Sampling Administration",
+    Period: "2009",
+    position: "Sampling Inspection Administration",
     title: "AI Vision Integration",
     description:
       "Working with computer vision, visual inspection, and AI performance monitoring for industrial applications.",
     status: "Focus",
   },
   {
-    number: "04",
-    period: "Next Milestone",
+    Period: "2012",
+    position: "Sampling Inspection Team Leader",
+    title: "Continuous Growth",
+    description:
+      "Advancing technical expertise, pursuing further education, and preparing for broader career opportunities.",
+    status: "Future Goal",
+  },
+  {
+    Period: "2016",
+    position: "Quality Project Staff",
+    title: "Continuous Growth",
+    description:
+      "Advancing technical expertise, pursuing further education, and preparing for broader career opportunities.",
+    status: "Future Goal",
+  },
+  {
+    Period: "2022 - Now",
+    position: "Quality System Engineer",
     title: "Continuous Growth",
     description:
       "Advancing technical expertise, pursuing further education, and preparing for broader career opportunities.",
@@ -38,7 +54,7 @@ export default function ProfessionalGrowth() {
   return (
     <section
       id="growth"
-      className="grid min-h-[650px] items-center gap-10 px-6 py-10 md:grid-cols-2 md:px-12"
+      className="grid min-h-[650px] items-center gap-10 px-6 py-10 md:grid-cols-1 md:px-12"
     >
       <div className="mx-auto max-w-7xl">
         {/* Section Heading */}
@@ -61,33 +77,36 @@ export default function ProfessionalGrowth() {
         {/* Horizontal Timeline */}
         <div className="relative">
           {/* Connecting Line */}
-          <div className="absolute left-0 right-0 top-12 hidden h-px bg-gray-200 md:block" />
+          <div className="absolute left-0 right-0 top-12 hidden h-1 -translate-y-0 -rotate-[0deg] bg-lime-200 md:block" />
 
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-4 md:gap-6">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-6 md:gap-6">
             {growthStages.map((stage, index) => (
-              <article key={stage.number} className="relative">
+              <article
+                key={stage.Period}
+                className={`relative "md:-translate-y-0"}`}
+              >
                 {/* Timeline Marker */}
                 <div className="relative z-10 mb-7 flex items-center gap-4 md:block">
                   <div
-                    className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full border-4 border-white text-sm font-bold shadow-sm ${
-                      index === 3
+                    className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-sm font-bold shadow-sm ${
+                      index === 5
                         ? "bg-gray-200 text-gray-500"
                         : "bg-lime-700 text-white"
                     }`}
                   >
-                    {stage.number}
+                    {stage.Period}
                   </div>
 
-                  <span className="font-mono text-xs uppercase tracking-widest text-gray-400 md:mt-5 md:block">
-                    {stage.period}
+                  <span className="mt-2 block max-w-[140px] font-mono text-xs uppercase tracking-widest text-gray-400">
+                    {stage.position}
                   </span>
                 </div>
 
                 {/* Content Card */}
-                <div className="h-full rounded-2xl border border-gray-100 bg-gray-50 p-5 transition duration-300 hover:-translate-y-1 hover:border-lime-300 hover:bg-white hover:shadow-lg">
+                <div className="h-full rounded-xl bg-gray-0 p-5 transition duration-300 hover:-translate-y-1 hover:border-lime-300 hover:bg-white hover:shadow-lg">
                   <span
                     className={`mb-4 inline-flex rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wider ${
-                      index === 3
+                      index === 5
                         ? "bg-gray-200 text-gray-600"
                         : "bg-lime-100 text-lime-800"
                     }`}
