@@ -4,7 +4,8 @@ import { useState } from "react";
 import {
   Clipboard,
   Rocket,
-  Medal
+  Medal,
+  Plane
 } from "lucide-react";
 import {
  IconClipboard,
@@ -126,7 +127,7 @@ const growthStages = [
     ],
   },
   {
-     Period: "2022",
+    Period: "2022",
     position: "Quality Digital Solutions Engineer",
     jobrole: "Digital Transformation & Solution Engineering",
 
@@ -223,7 +224,10 @@ export default function ProfessionalGrowth() {
           {/* Horizontal Timeline */}
           <div className="relative">
             {/* Connecting Line */}
-            <div className="absolute left-0 right-0 top-12 hidden h-1 -translate-y-0 -rotate-[0deg] bg-lime-200 md:block" />
+            <div className="absolute left-0 right-16 top-12 hidden border-t-2 border-dashed border-lime-400 md:block " />
+            <div className="absolute right-0 top-12 -translate-y-1/2">
+              <Plane className="h-10 w-10 text-lime-500 [stroke-width:1] rotate-45 fill-lime-500" />
+            </div>
             {/* Separation Line */}
             <div className="absolute left-45 right-0 top-12 hidden w-1 h-40 -translate-y-0 -rotate-[0deg] bg-gray-200 md:block" />
             <div className="absolute left-200 right-0 top-12 hidden w-1 h-40 -translate-y-0 -rotate-[0deg] bg-gray-200 md:block" />
@@ -238,7 +242,7 @@ export default function ProfessionalGrowth() {
                   {/* Timeline Marker */}
                   <div className="relative z-10 mb-7 flex items-center gap-4 md:block">
                     <div
-                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-black ${
+                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-black hover:text-3xl ${
                         index === 5 || index === 6
                           ? "bg-gray-200 text-gray-500"
                           : "bg-lime-700 text-white"
@@ -272,7 +276,7 @@ export default function ProfessionalGrowth() {
           className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-1 md:px-12 animate-in fade-in"
         >
           {/* Horizontal Timeline */}
-          <div className="relative bg-lime-600 rounded-xl p-5">
+          <div className="relative bg-lime-300 rounded-xl p-5">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2">
               
                   {/* Item 1 */}
