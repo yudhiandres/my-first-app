@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa";
 import Image from "next/image";
 import ProfessionalGrowth from "@/components/ProfessionalGrowth";
-
+import MySkill from "@/components/MySkill";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
@@ -40,6 +40,7 @@ export default function Home() {
 
         <ul className="hidden items-center gap-10 text-sm font-medium md:flex">
           <li><a href="#home">Home</a></li>
+          <li><a href="#myjourney">MyJourney</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -65,7 +66,7 @@ export default function Home() {
           </h2>
 
           <p className="mb-8 font-mono text-xs tracking-[0.25em] text-lime-700">
-            QUALITY CONTROL / INDUSTRIAL SOLUTIONS ENGINEER
+            QUALITY CONTROL / QUALITY DIGITAL SOLUTIONS ENGINEER
           </p>
 
           <p className="mt-9 max-w-lg leading-8 text-gray-600">
@@ -154,6 +155,7 @@ export default function Home() {
       </section>
 
       <ProfessionalGrowth />
+      <MySkill />
 
       {/* HERO */}
       <section
