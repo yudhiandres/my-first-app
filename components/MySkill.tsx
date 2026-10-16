@@ -1,38 +1,78 @@
 "use client";
 
-import { useState } from "react";
+
 import {
-  Clipboard,
+  LanguagesIcon,
   Rocket,
-  Medal
+  Medal,
+  Plane
 } from "lucide-react";
 import {
- IconClipboard,
- IconRocket,
+ IconLanguage,
+ IconTool,
+ IconMan,
  IconMedal,
 } from "@tabler/icons-react";
 import Image from "next/image";
-
+import { motion, useInView, animate } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 const language = [
   { name: "Indonesian", level: 90 },
-  { name: "English", level: 85 },
+  { name: "English", level: 50 },
 ];
-const hardskills = [
-  { name: "Excel", level: 95 },
-  { name: "Power BI", level: 85 },
+const digitalskill = [
+  { name: "Ms Office Advanced", level: 95 },
   { name: "Python", level: 80 },
-  { name: "C#", level: 75 },
-];
-const softskills = [
-  { name: "Communication", level: 90 },
-  { name: "Teamwork", level: 85 },
-  { name: "Problem Solving", level: 80 },
-  { name: "Leadership", level: 75 },
+  { name: "C#", level: 60 },
+  { name: "HTML & CSS", level: 30 },
 ];
 
+const manufactureskill = [
+  { name: "Quality Control", level: 70 },
+  { name: "Prod.Preparation", level: 60 },
+  { name: "Continous Improvement", level: 70 },
+  { name: "ATS Inspect System", level: 80 },
+];
+const softskills = [
+  { name: "Communication", level: 80 },
+  { name: "Teamwork", level: 85 },
+  { name: "Problem Solving", level: 80 },
+  { name: "Time Management", level: 75 },
+];
+
+function SkillCounter({
+    target,
+    isInView,
+  }: {
+    target: number;
+    isInView: boolean;
+  }) {
+    const [count, setCount] = useState(0);
+
+    useEffect(() => {
+      if (!isInView) return;
+
+      const controls = animate(0, target, {
+        duration: 1.5,
+        onUpdate(value) {
+          setCount(Math.round(value));
+        },
+      });
+
+      return () => controls.stop();
+    }, [isInView, target]);
+
+  return <span>{count}%</span>;
+}
+
 export default function MySkill() {
-  
+  const ref = useRef(null);
+
+  const isInView = useInView(ref, {
+    once: true,
+    amount: 0.5,
+  });
     
   return (
     <>
@@ -73,36 +113,46 @@ export default function MySkill() {
         </div>
       </section>
       <section
-        id="myjourney"
-        className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-3 md:px-12"
+        className="grid min-h-[100px] gap-10 px-6 py-0 md:grid-cols-3 md:px-12"
       >
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
             <div className="mb-16 max-w-2xl">
-
-              <h2 className="text-2xl font-black leading-[1.05] tracking-tighter md:text-2xl">
-              
-                <span className="text-lime-700">Languages.</span>
-              </h2>
+              <div className="mb-4 flex ">
+                <IconLanguage
+                  className="h-10 w-10 text-lime-700"
+                  strokeWidth={2}
+                />
+                <h2 className="text-2xl font-black tracking-tighter">
+                  <span className="text-black">Languages.</span>
+                </h2>
+              </div>
 
               <p className="mt-5 leading-7 text-gray-500">
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>
 
-              <div className="space-y-4 py-2">
+              <div ref={ref}>
                 {language.map((skill) => (
                   <div key={skill.name}>
                     <div className="mb-1 flex justify-between">
-                      <span>{skill.name}</span>
-                      <span>{skill.level}%</span>
+                      <span className="text-gray-500">{skill.name}</span>
+                      <SkillCounter
+                        target={skill.level}
+                        isInView={isInView}
+                      />
                     </div>
 
                     <div className="h-4 w-full rounded-full bg-slate-200">
-                      <div
-                        className="h-4 rounded-full bg-lime-600"
-                        style={{ width: `${skill.level}%` }}
+                      <motion.div
+                        className="h-full rounded-full bg-lime-600"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true, amount: 0.7 }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
                       />
+                     
                     </div>
                   </div>
                 ))}
@@ -112,64 +162,113 @@ export default function MySkill() {
         </div>
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
-            <div className="mb-16 max-w-2xl">
-
-              <h2 className="text-2xl font-black leading-[1.05] tracking-tighter md:text-2xl">
-              
-                <span className="text-lime-700">Hard Skills.</span>
-              </h2>
+           <div className="mb-16 max-w-2xl">
+              <div className="mb-4 flex ">
+                <IconTool
+                  className="h-10 w-10 text-lime-700"
+                  strokeWidth={2}
+                />
+                <h2 className="text-2xl font-black tracking-tighter">
+                  <span className="text-black">Hardskill.</span>
+                </h2>
+              </div>
 
               <p className="mt-5 leading-7 text-gray-500">
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>
+                
+              <div className="grid grid-cols-2 gap-4">
+                <div ref={ref}>
+                  <p className="text-m font-semibold text-lime-700">Manufacture Skill</p>
+                  {manufactureskill.map((skill) => (
+                    <div key={skill.name}>
+                      <div className="mb-1 flex justify-between">
+                        <span className="text-gray-500">{skill.name}</span>
+                        <SkillCounter
+                          target={skill.level}
+                          isInView={isInView}
+                        />
+                      </div>
 
-              <div className="space-y-4 py-2">
-                {hardskills.map((skill) => (
-                  <div key={skill.name}>
-                    <div className="mb-1 flex justify-between">
-                      <span>{skill.name}</span>
-                      <span>{skill.level}%</span>
+                      <div className="h-4 w-full rounded-full bg-slate-200">
+                        <motion.div
+                          className="h-full rounded-full bg-lime-600"
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true, amount: 0.7 }}
+                          transition={{ duration: 1.5, ease: "easeOut" }}
+                        />
+                      </div>
                     </div>
+                  ))}
+                </div>
 
-                    <div className="h-4 w-full rounded-full bg-slate-200">
-                      <div
-                        className="h-4 rounded-full bg-lime-600"
-                        style={{ width: `${skill.level}%` }}
-                      />
+                <div ref={ref}>
+                  <p className="text-m font-semibold text-lime-700">Digital Skill</p>
+                  {digitalskill.map((skill) => (
+                    <div key={skill.name}>
+                      <div className="mb-1 flex justify-between">
+                        <span className="text-gray-500">{skill.name}</span>
+                        <SkillCounter
+                          target={skill.level}
+                          isInView={isInView}
+                        />
+                      </div>
+
+                      <div className="h-4 w-full rounded-full bg-slate-200">
+                        <motion.div
+                          className="h-full rounded-full bg-lime-600"
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          viewport={{ once: true, amount: 0.7 }}
+                          transition={{ duration: 1.5, ease: "easeOut" }}
+                        />
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+
               </div>
-              
+
             </div>
         </div>
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
             <div className="mb-16 max-w-2xl">
-
-              <h2 className="text-2xl font-black leading-[1.05] tracking-tighter md:text-2xl">
-              
-                <span className="text-lime-700">Soft Skills.</span>
-              </h2>
+              <div className="mb-4 flex ">
+                <IconMan
+                  className="h-10 w-10 text-lime-700"
+                  strokeWidth={2}
+                />
+                <h2 className="text-2xl font-black tracking-tighter">
+                  <span className="text-black">Soft Skills.</span>
+                </h2>
+              </div>
 
               <p className="mt-5 leading-7 text-gray-500">
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>
 
-              <div className="space-y-4 py-2">
+              <div ref={ref}>
                 {softskills.map((skill) => (
                   <div key={skill.name}>
                     <div className="mb-1 flex justify-between">
-                      <span>{skill.name}</span>
-                      <span>{skill.level}%</span>
+                      <span className="text-gray-500">{skill.name}</span>
+                      <SkillCounter
+                        target={skill.level}
+                        isInView={isInView}
+                      />
                     </div>
 
                     <div className="h-4 w-full rounded-full bg-slate-200">
-                      <div
-                        className="h-4 rounded-full bg-lime-600"
-                        style={{ width: `${skill.level}%` }}
+                      <motion.div
+                        className="h-full rounded-full bg-lime-600"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true, amount: 0.7 }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
                       />
                     </div>
                   </div>

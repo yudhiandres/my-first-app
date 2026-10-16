@@ -242,8 +242,8 @@ export default function ProfessionalGrowth() {
                   {/* Timeline Marker */}
                   <div className="relative z-10 mb-7 flex items-center gap-4 md:block">
                     <div
-                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-black hover:text-3xl ${
-                        index === 5 || index === 6
+                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-black hover:text-3xl hover:shadow-lg ${
+                       index === 6
                           ? "bg-gray-200 text-gray-500"
                           : "bg-lime-700 text-white"
                       }`}
@@ -276,7 +276,7 @@ export default function ProfessionalGrowth() {
           className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-1 md:px-12 animate-in fade-in"
         >
           {/* Horizontal Timeline */}
-          <div className="relative bg-lime-300 rounded-xl p-5">
+          <div className="relative bg-lime-600 rounded-xl p-5">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2">
               
                   {/* Item 1 */}
@@ -307,13 +307,13 @@ export default function ProfessionalGrowth() {
                         Key Projects
                       </h3>
 
-                      <p className="text-sm text-muted-foreground">
+                      <div className="text-sm text-muted-foreground">
                         <ol className="list-decimal pl-5 text-black space-y-1">
                           {selectedStage.keyproject.map((project, idx) => (
                             <li key={idx}>{project}</li>
                           ))}
                         </ol>
-                      </p>
+                      </div>
                     </div>
                   </div>
 
@@ -328,16 +328,15 @@ export default function ProfessionalGrowth() {
                         Achievements
                       </h3>
 
-                      <p className="text-sm text-muted-foreground">
+                      <div className="text-sm text-muted-foreground">
                         <ol className="list-decimal pl-5 text-black space-y-1">
                           {selectedStage.achievement.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}
                         </ol>
-                      </p>
+                      </div>
                     </div>
                   </div>
-                
             </div>
           </div>
         
