@@ -43,9 +43,8 @@ const growthStages = [
 
     keyproject: [
       "Tightening Torque Verification",
-      "Force Measurement Inspection",
+      "Force Measurement Inpection",
       "Liquid Level Quality Check",
-      "Dimensional Sampling Inspection",
       "Inspection Data Recording",
       "Quality Defect Identification"
     ],
@@ -243,7 +242,7 @@ export default function ProfessionalGrowth() {
                   <div className="relative z-10 mb-7 flex items-center gap-4 md:block">
                     <div
                       className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-black hover:text-3xl hover:shadow-lg ${
-                       index === 6
+                      index === 6
                           ? "bg-gray-200 text-gray-500"
                           : "bg-lime-700 text-white"
                       }`}
@@ -290,7 +289,7 @@ export default function ProfessionalGrowth() {
                         Job Role
                       </h3>
 
-                      <p className="text-sm text-muted-foreground">
+                      <p className="text-sm text-white text-muted-foreground">
                         {selectedStage.description}
                       </p>
                     </div>
@@ -308,7 +307,7 @@ export default function ProfessionalGrowth() {
                       </h3>
 
                       <div className="text-sm text-muted-foreground">
-                        <ol className="list-decimal pl-5 text-black space-y-1">
+                        <ol className="list-decimal pl-5 text-white space-y-1">
                           {selectedStage.keyproject.map((project, idx) => (
                             <li key={idx}>{project}</li>
                           ))}
@@ -329,7 +328,7 @@ export default function ProfessionalGrowth() {
                       </h3>
 
                       <div className="text-sm text-muted-foreground">
-                        <ol className="list-decimal pl-5 text-black space-y-1">
+                        <ol className="list-decimal pl-5 text-white space-y-1">
                           {selectedStage.achievement.map((item, idx) => (
                             <li key={idx}>{item}</li>
                           ))}

@@ -14,6 +14,8 @@ import {
 import Image from "next/image";
 import ProfessionalGrowth from "@/components/ProfessionalGrowth";
 import MySkill from "@/components/MySkill";
+import ProfileCard from "@/components/ProfileCard";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
@@ -157,6 +159,7 @@ export default function Home() {
 
       <ProfessionalGrowth />
       <MySkill />
+      <ProfileCard />
 
       {/* HERO */}
       <section

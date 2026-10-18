@@ -128,9 +128,8 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500">
-                A continuous journey of learning, engineering, and
-                building impactful technology solutions for industry.
+              <p className="mt-5 leading-7 text-gray-500 py-2">
+                Proficiency in Indonesian and English for workplace communication and continuous learning.
               </p>
 
               <div ref={ref}>
@@ -173,9 +172,9 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500">
-                A continuous journey of learning, engineering, and
-                building impactful technology solutions for industry.
+              <p className="mt-5 leading-7 text-gray-500 py-2">
+                Technical competencies in manufacturing processes, quality management, and 
+                digital solution development to drive operational excellence.
               </p>
                 
               <div className="grid grid-cols-2 gap-4">
@@ -246,7 +245,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500">
+              <p className="mt-5 leading-7 text-gray-500 py-2">
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>

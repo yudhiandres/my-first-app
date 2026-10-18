@@ -3,12 +3,13 @@
     {
       "name": "Default",
       "files": [
-        "components/ProfessionalGrowth.tsx",
-        "package.json",
-        "pnpm-lock.yaml",
-        ".vscode/changelists.json",
         "components/MySkill.tsx",
-        "public/expertise2.png"
+        "components/ProfessionalGrowthOld.tsx",
+        ".vscode/changelists.json",
+        "components/ProfessionalGrowth.tsx",
+        "config/styles.ts",
+        "components/ProfileCard.tsx",
+        "app/page.tsx"
       ]
     }
   ],
