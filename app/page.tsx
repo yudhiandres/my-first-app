@@ -15,41 +15,17 @@ import Image from "next/image";
 import ProfessionalGrowth from "@/components/ProfessionalGrowth";
 import MySkill from "@/components/MySkill";
 import ProfileCard from "@/components/ProfileCard";
-
+import Navbar from "@/components/NavigationBar";
+import TestingTail from "@/components/TestingTail";
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
 
       {/* NAVBAR */}
-      <nav className="flex items-center justify-between border-b border-black/10 px-  6 py-5 md:px-12 relative z-50">
-        <div className="mb-1 flex items-center gap-3">
-          <p className="text-base font-bold uppercase tracking-[0.15em] text-gray-500">
-            Curriculum Vitae | 
-          </p>
-
-          <a
-            href="https://wa.me/6282223331149"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="text-gray-600 transition hover:text-lime-700"
-          >
-            <FaWhatsapp size={24} />
-          </a>
-
-          
-        </div>
-
-        <ul className="hidden items-center gap-10 text-sm font-medium md:flex">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#myjourney">MyJourney</a></li>
-          <li><a href="#myskill">Skill</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        
-      </nav>
+      <header className="sticky top-0 z-50 bg-gray-700 opacity-90 backdrop-blur-md">
+        <Navbar />
+      </header>
+     
 
       {/* HERO */}
       <section
@@ -57,6 +33,10 @@ export default function Home() {
         className="grid min-h-[650px] items-center gap-10 px-6 py-10 md:grid-cols-2 md:px-12"
       >
         <div>
+          <p className="mb-3 font-mono text-xs tracking-[0.3em] text-lime-700">
+                01 | ABOUT ME
+          </p>
+
           <h3 className="text-xl font-bold text-lime-800">Hallo, kenalkan saya</h3>
           
 
@@ -160,7 +140,8 @@ export default function Home() {
       <ProfessionalGrowth />
       <MySkill />
       <ProfileCard />
-
+      <TestingTail /> 
+      
       {/* HERO */}
       <section
         id="home"

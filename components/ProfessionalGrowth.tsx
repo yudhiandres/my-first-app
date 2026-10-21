@@ -181,17 +181,17 @@ export default function ProfessionalGrowth() {
     <>
       <section
         id="myjourney"
-        className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-2 md:px-12"
+        className="grid min-h-[100px] items-center gap-10 px-6 py-10 md:grid-cols-2 md:px-12"
       >
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
             <div className="mb-16 max-w-2xl">
               <p className="mb-3 font-mono text-xs tracking-[0.3em] text-lime-700">
-                CAREER DEVELOPMENT
+                02 | CAREER DEVELOPMENT
               </p>
 
-              <h2 className="text-5xl font-black leading-[1.05] tracking-tighter md:text-7xl">
-                Educations &{" "}
+              <h2 className="text-3xl font-black leading-[1.1] tracking-tighter md:text-6xl">
+                Educations &{" "} <br />
                 <span className="text-lime-700">Career Journey.</span>
               </h2>
 
@@ -217,7 +217,7 @@ export default function ProfessionalGrowth() {
       </section>    
       <section
         id="growth"
-        className="grid min-h-[100px] items-center gap-10 px-6 py-3 md:grid-cols-1 md:px-12"
+        className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-1 md:px-12 -mt-10"
       > 
 
           {/* Horizontal Timeline */}
@@ -241,7 +241,7 @@ export default function ProfessionalGrowth() {
                   {/* Timeline Marker */}
                   <div className="relative z-10 mb-7 flex items-center gap-4 md:block">
                     <div
-                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-black hover:text-3xl hover:shadow-lg ${
+                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-yellow-500 hover:text-3xl hover:shadow-lg ${
                       index === 6
                           ? "bg-gray-200 text-gray-500"
                           : "bg-lime-700 text-white"

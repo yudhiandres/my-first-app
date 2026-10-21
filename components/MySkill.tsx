@@ -78,17 +78,17 @@ export default function MySkill() {
     <>
       <section
         id="myskill"
-        className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-2 md:px-12"
+        className="grid min-h-[100px] items-center gap-10 px-6 py-10 md:grid-cols-2 md:px-12"
       >
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
             <div className="mb-16 max-w-2xl">
               <p className="mb-3 font-mono text-xs tracking-[0.3em] text-lime-700">
-                EXPERTISE
+                03 | EXPERTISE
               </p>
 
-              <h2 className="text-5xl font-black leading-[1.05] tracking-tighter md:text-7xl">
-                Technical{" "}
+              <h2 className="text-3xl font-black leading-[1.1] tracking-tighter md:text-6xl">
+                Technical{" "} <br />
                 <span className="text-lime-700">Expertise.</span>
               </h2>
 
@@ -105,15 +105,15 @@ export default function MySkill() {
                 src="/expertise2.png"
                 alt="Yudhi C Andres"
                 fill
-                sizes="(max-width: 900px) 100vw, 50vw"
-                className="object-contain relative x-2 y-20 z-10"
+                sizes="(max-width: 900px) 70vw, 35vw"
+                className="object-contain relative x-2 y-30 z-10"
                 priority
               />
       
         </div>
       </section>
       <section
-        className="grid min-h-[100px] gap-10 px-6 py-0 md:grid-cols-3 md:px-12"
+        className="grid min-h-[100px] gap-10 px-6 py-0 md:grid-cols-3 md:px-12 -mt-10"
       >
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
@@ -128,7 +128,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500 py-2">
+              <p className="mt-5 leading-7 text-gray-500 py-0">
                 Proficiency in Indonesian and English for workplace communication and continuous learning.
               </p>
 
@@ -172,7 +172,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500 py-2">
+              <p className="mt-5 leading-7 text-gray-500 py-0">
                 Technical competencies in manufacturing processes, quality management, and 
                 digital solution development to drive operational excellence.
               </p>
@@ -245,7 +245,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500 py-2">
+              <p className="mt-5 leading-7 text-gray-500 py-0">
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>
