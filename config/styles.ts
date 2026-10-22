@@ -1,5 +1,83 @@
 export const styles = {
-  card: `
+  navBarColor:`
+    bg-gray-800
+    opacity-40
+    border-b
+    rounded-lg
+    border-black-400
+    border 2
+  `,
+  navBarMenuFont:`
+    text-white
+    font-Poppins
+    text-m
+  `,
+  navBarMenuOnHover:`
+    hover:text-amber-300
+    hover:shadow-l
+    hover:text-xl
+  `,
+  pageName:`
+    mb-3
+    font-mono
+    text-xs
+    tracking-[0.3em]
+    text-lime-700
+  `,
+  pageTitleBlack:`
+    text-2xl 
+    font-black 
+    leading-[1.1] 
+    tracking-tighter 
+    md:text-6xl
+  `,
+  pageTitleLime:`
+    text-lime-700
+  `,
+  pageTitleDescription:`
+    mt-5
+    leading-7
+    text-gray-500
+  `,
+  timeLineMarker:`
+    flex 
+    h-24 w-24 
+    shrink-0 
+    items-center 
+    justify-center 
+    rounded-full 
+    text-xl 
+    font-poppins
+    font-bold 
+    shadow-sm 
+    hover:bg-lime-300 
+    hover:text-gray-600
+    hover:text-3xl 
+    hover:shadow-lg
+  `,
+  timeLineStagePosition:`
+    mt-2 
+    block 
+    max-w-[140px] 
+    font-mono 
+    text-xs 
+    uppercase 
+    racking-widest 
+    md:mt-4 
+    md:max-w-[200px]
+  `,
+  h3GrowthDescription:`
+    mb-2 
+    text-lg 
+    font-semibold 
+    text-white
+  `,
+  selectedDescription:`
+    text-sm 
+    text-white 
+    text-muted-foreground
+  `,
+  card: `'/
     bg-lime-600
     rounded-2xl
     shadow-md

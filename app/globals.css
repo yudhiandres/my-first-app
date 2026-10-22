@@ -19,6 +19,22 @@
   }
 }
 
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(250px, -150px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
 body {
   background: var(--background);
   color: var(--foreground);

@@ -10,6 +10,7 @@ import {
   FaGithub,
   FaInstagram,
   FaWhatsapp,
+  
 } from "react-icons/fa";
 import Image from "next/image";
 import ProfessionalGrowth from "@/components/ProfessionalGrowth";
@@ -17,12 +18,15 @@ import MySkill from "@/components/MySkill";
 import ProfileCard from "@/components/ProfileCard";
 import Navbar from "@/components/NavigationBar";
 import TestingTail from "@/components/TestingTail";
+import {styles} from "../config/styles";
+
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f2eb] text-[#171816]">
 
       {/* NAVBAR */}
-      <header className="sticky top-0 z-50 bg-gray-700 opacity-90 backdrop-blur-md">
+      <header className="sticky items-center justify-center pt-2 px-2 top-0 z-50 ">
         <Navbar />
       </header>
      
@@ -33,17 +37,17 @@ export default function Home() {
         className="grid min-h-[650px] items-center gap-10 px-6 py-10 md:grid-cols-2 md:px-12"
       >
         <div>
-          <p className="mb-3 font-mono text-xs tracking-[0.3em] text-lime-700">
+          <p className={`${styles.pageName}`}>
                 01 | ABOUT ME
           </p>
 
           <h3 className="text-xl font-bold text-lime-800">Hallo, kenalkan saya</h3>
           
 
-          <h2 className="text-5xl font-black leading-[1.05] tracking-tighter md:text-7xl">
+          <h2 className={`${styles.pageTitleBlack}`}>
             Yudhi C{" "} 
             
-            <span className="text-lime-700">
+            <span className={`${styles.pageTitleLime}`}>
               Andres
             </span>
           </h2>
@@ -52,7 +56,9 @@ export default function Home() {
             QUALITY CONTROL / QUALITY DIGITAL SOLUTIONS ENGINEER
           </p>
 
-          <p className="mt-9 max-w-lg leading-8 text-gray-600">
+          <p className={`${styles.pageTitleDescription
+
+          }`}>
             Berpengalaman lebih dari 19 tahun di dunia manufaktur otomotif,
             dengan 5 tahun terakhir fokus pengembangan solusi teknologi yang
             menjawab kebutuhan nyata. Saya tertarik pada
@@ -69,6 +75,10 @@ export default function Home() {
             </a>
 
           </div>
+          <div className="absolute -top-80-left-20 h-65 w-45 rounded-full bg-lime-100/30 blur-3xl animate-float" />
+          <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-lime-600/30 blur-3xl animate-float" />
+          <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-lime-300/30 blur-3xl animate-float" />
+          <div className="absolute bottom-0 left-1/3 h-96 w-96 rounded-full bg-lime-500/20 blur-3xl animate-float" />
 
           <div className="mt-10">
           <p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-gray-500">
@@ -118,9 +128,16 @@ export default function Home() {
         <div className="absolute inset-0 flex items-center justify-center z-0">
 
           {/* Rectangle lime depan */}
-          <div className="absolute top-0 w-100 h-170 bg-lime-700 rotate-0 opacity-90 z-10 y-5 pointer-events-none" />
-
-
+          <div className="relative top-0 w-100 h-170 bg-lime-700 rotate-0 opacity-90 z-10 y-10 pointer-events-none" />
+          
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage:
+              "linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
+          }}
+        />
         </div>
 
         {/* Foto profil */}
@@ -129,14 +146,20 @@ export default function Home() {
           alt="Yudhi C Andres"
           fill
           sizes="(max-width: 900px) 100vw, 50vw"
-          className="object-contain relative x-2 y-20 z-10"
+          className="object-contain relative x-2 y-40 z-10"
           priority
         />
 
       </div>
         
       </section>
+      <div className="relative">
+        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 blur-lg opacity-50" />
 
+        <div className="relative rounded-xl bg-slate-900 p-6">
+          Content
+        </div>
+      </div>
       <ProfessionalGrowth />
       <MySkill />
       <ProfileCard />
@@ -204,7 +227,7 @@ export default function Home() {
           </span>
         </div>
       </section>
-
+      
       {/* ABOUT */}
       <section id="about" className="px-6 py-20 md:px-12">
         <p className="font-mono text-xs tracking-widest text-lime-700">

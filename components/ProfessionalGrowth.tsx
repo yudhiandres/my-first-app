@@ -13,6 +13,7 @@ import {
  IconMedal,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import {styles} from "../config/styles";
 
 const growthStages = [
   {
@@ -186,16 +187,16 @@ export default function ProfessionalGrowth() {
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
             <div className="mb-16 max-w-2xl">
-              <p className="mb-3 font-mono text-xs tracking-[0.3em] text-lime-700">
+              <p className={`${styles.pageName}`}>
                 02 | CAREER DEVELOPMENT
               </p>
 
-              <h2 className="text-3xl font-black leading-[1.1] tracking-tighter md:text-6xl">
+              <h2 className={`${styles.pageTitleBlack}`}>
                 Educations &{" "} <br />
-                <span className="text-lime-700">Career Journey.</span>
+                <span className={`${styles.pageTitleLime}`}>Career Journey.</span>
               </h2>
-
-              <p className="mt-5 leading-7 text-gray-500">
+                                                                                
+              <p className={`${styles.pageTitleDescription}`}>
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>
@@ -241,7 +242,7 @@ export default function ProfessionalGrowth() {
                   {/* Timeline Marker */}
                   <div className="relative z-10 mb-7 flex items-center gap-4 md:block">
                     <div
-                      className={`flex h-24 w-24 shrink-0 items-center justify-center rounded-full text-xl font-bold shadow-sm hover:bg-lime-300 hover:text-yellow-500 hover:text-3xl hover:shadow-lg ${
+                      className={`${styles.timeLineMarker} ${
                       index === 6
                           ? "bg-gray-200 text-gray-500"
                           : "bg-lime-700 text-white"
@@ -251,7 +252,7 @@ export default function ProfessionalGrowth() {
                     </div>
 
                     <span
-                      className={`mt-2 block max-w-[140px] font-mono text-xs uppercase tracking-widest md:mt-4 md:max-w-[200px]
+                      className={`${styles.timeLineStagePosition}
                       ${
                         activeStage === index
                           ? "text-lime-600 font-bold"
@@ -285,11 +286,11 @@ export default function ProfessionalGrowth() {
                     </div>
 
                     <div>
-                      <h3 className="mb-2 text-lg font-semibold text-white">
+                      <h3 className={`${styles.h3GrowthDescription}`}>
                         Job Role
                       </h3>
 
-                      <p className="text-sm text-white text-muted-foreground">
+                      <p className={`${styles.selectedDescription}`}>
                         {selectedStage.description}
                       </p>
                     </div>
