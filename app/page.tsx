@@ -153,19 +153,83 @@ export default function Home() {
       </div>
         
       </section>
-      <div className="relative">
-        <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 blur-lg opacity-50" />
-
-        <div className="relative rounded-xl bg-slate-900 p-6">
-          Content
-        </div>
-      </div>
-      <ProfessionalGrowth />
-      <MySkill />
-      <ProfileCard />
-      <TestingTail /> 
       
+      <ProfessionalGrowth />
+      <MySkill /> 
+      
+      {/* PROJECTS */}
+      <section id="projects" className="bg-[#20231f] px-6 py-25 text-white md:px-12">
+        <p className="font-mono text-xs tracking-widest text-lime-300">
+          04 / SELECTED PROJECTS
+        </p>
+
+        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-6xl">
+          Work that matters.
+        </h2>
+
+        <div className="mt-12 grid gap-5 md:grid-cols-3">
+          <div className="border border-white/15 p-7 transition hover:border-lime-300">
+            <Camera className="mb-6 text-lime-300" size={32} />
+            <h3 className="text-xl font-bold">SpecVision Inspect</h3>
+            <p className="mt-4 text-sm leading-7 text-gray-400">
+              Sistem inspeksi visual berbasis kamera dan AI
+              untuk kebutuhan manufaktur.
+            </p>
+          </div>
+
+          <div className="border border-white/15 p-7 transition hover:border-lime-300">
+            <Code2 className="mb-6 text-lime-300" size={32} />
+            <h3 className="text-xl font-bold">SpecVision Configurator</h3>
+            <p className="mt-4 text-sm leading-7 text-gray-400">
+              Aplikasi desktop untuk mengelola konfigurasi
+              produk, kamera, template, dan model AI.
+            </p>
+          </div>
+
+          <div className="border border-white/15 p-7 transition hover:border-lime-300">
+            <Cpu className="mb-6 text-lime-300" size={32} />
+            <h3 className="text-xl font-bold">AI Performance</h3>
+            <p className="mt-4 text-sm leading-7 text-gray-400">
+              Monitoring akurasi deteksi, utilisasi kamera,
+              tren inspeksi, dan kesalahan hasil pemeriksaan.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section className="px-6 py-18 md:px-12">
+        <p className="font-mono text-xs tracking-widest text-lime-700">
+          05 / TECHNOLOGY
+        </p>
+
+        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-5xl">
+          Tools I work with.
+        </h2>
       {/* HERO */}
+      
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          {[
+            "Python",
+            "PyQt5",
+            "OpenCV",
+            "YOLO",
+            "ONNX",
+            "SQLite",
+            "Next.js",
+            "ATS Inspect",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="border border-black/15 px-5 py-3 font-mono text-sm transition hover:bg-lime-300"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+      </section>
+
       <section
         id="home"
         className="grid min-h-[650px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:px-12"
@@ -227,7 +291,7 @@ export default function Home() {
           </span>
         </div>
       </section>
-      
+
       {/* ABOUT */}
       <section id="about" className="px-6 py-20 md:px-12">
         <p className="font-mono text-xs tracking-widest text-lime-700">
@@ -250,78 +314,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-
-      {/* PROJECTS */}
-      <section id="projects" className="bg-[#20231f] px-6 py-20 text-white md:px-12">
-        <p className="font-mono text-xs tracking-widest text-lime-300">
-          02 / SELECTED PROJECTS
-        </p>
-
-        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-6xl">
-          Work that matters.
-        </h2>
-
-        <div className="mt-12 grid gap-5 md:grid-cols-3">
-          <div className="border border-white/15 p-7 transition hover:border-lime-300">
-            <Camera className="mb-6 text-lime-300" size={32} />
-            <h3 className="text-xl font-bold">SpecVision Inspect</h3>
-            <p className="mt-4 text-sm leading-7 text-gray-400">
-              Sistem inspeksi visual berbasis kamera dan AI
-              untuk kebutuhan manufaktur.
-            </p>
-          </div>
-
-          <div className="border border-white/15 p-7 transition hover:border-lime-300">
-            <Code2 className="mb-6 text-lime-300" size={32} />
-            <h3 className="text-xl font-bold">SpecVision Configurator</h3>
-            <p className="mt-4 text-sm leading-7 text-gray-400">
-              Aplikasi desktop untuk mengelola konfigurasi
-              produk, kamera, template, dan model AI.
-            </p>
-          </div>
-
-          <div className="border border-white/15 p-7 transition hover:border-lime-300">
-            <Cpu className="mb-6 text-lime-300" size={32} />
-            <h3 className="text-xl font-bold">AI Performance</h3>
-            <p className="mt-4 text-sm leading-7 text-gray-400">
-              Monitoring akurasi deteksi, utilisasi kamera,
-              tren inspeksi, dan kesalahan hasil pemeriksaan.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* SKILLS */}
-      <section className="px-6 py-20 md:px-12">
-        <p className="font-mono text-xs tracking-widest text-lime-700">
-          03 / TECHNOLOGY
-        </p>
-
-        <h2 className="mt-5 text-4xl font-black tracking-tighter md:text-5xl">
-          Tools I work with.
-        </h2>
-
-        <div className="mt-8 flex flex-wrap gap-3">
-          {[
-            "Python",
-            "PyQt5",
-            "OpenCV",
-            "YOLO",
-            "ONNX",
-            "SQLite",
-            "Next.js",
-            "REST API",
-          ].map((skill) => (
-            <span
-              key={skill}
-              className="border border-black/15 px-5 py-3 font-mono text-sm transition hover:bg-lime-300"
-            >
-              {skill}
-            </span>
-          ))}
-        </div>
-      </section>
-
       {/* CONTACT */}
       <section id="contact" className="bg-[#d7ff4f] px-6 py-20 text-center">
         <p className="font-mono text-xs tracking-widest">

@@ -31,7 +31,6 @@ export default function Navbar() {
           <li className={`${styles.navBarMenuFont} ${styles.navBarMenuOnHover}`}><a href="#home">Home</a></li>
           <li className={`${styles.navBarMenuFont} ${styles.navBarMenuOnHover}`}><a href="#myjourney">MyJourney</a></li>
           <li className={`${styles.navBarMenuFont} ${styles.navBarMenuOnHover}`}><a href="#myskill">Skill</a></li>
-          <li className={`${styles.navBarMenuFont} ${styles.navBarMenuOnHover}`}><a href="#about">About</a></li>
           <li className={`${styles.navBarMenuFont} ${styles.navBarMenuOnHover}`}><a href="#projects">Projects</a></li>
           <li className={`${styles.navBarMenuFont} ${styles.navBarMenuOnHover}`}><a href="#contact">Contact</a></li>
         </ul>

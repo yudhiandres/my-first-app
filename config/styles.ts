@@ -75,7 +75,7 @@ export const styles = {
   selectedDescription:`
     text-sm 
     text-white 
-    text-muted-foreground
+    text-muted-foreground..
   `,
   card: `'/
     bg-lime-600

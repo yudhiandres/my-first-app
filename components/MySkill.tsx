@@ -16,6 +16,7 @@ import {
 import Image from "next/image";
 import { motion, useInView, animate } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { styles } from "../config/styles";
 
 const language = [
   { name: "Indonesian", level: 90 },
@@ -83,16 +84,16 @@ export default function MySkill() {
         <div className="mx-auto max-w-7xl">
           {/* Section Heading */}
             <div className="mb-16 max-w-2xl">
-              <p className="mb-3 font-mono text-xs tracking-[0.3em] text-lime-700">
+              <p className={`${styles.pageName}`}>
                 03 | EXPERTISE
               </p>
 
-              <h2 className="text-3xl font-black leading-[1.1] tracking-tighter md:text-6xl">
+              <h2 className={`${styles.pageTitleBlack}`}>
                 Technical{" "} <br />
-                <span className="text-lime-700">Expertise.</span>
+                <span className={`${styles.pageTitleLime}`}>Expertise.</span>
               </h2>
 
-              <p className="mt-5 leading-7 text-gray-500">
+              <p className={`${styles.pageTitleDescription}`}>
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>
@@ -101,7 +102,7 @@ export default function MySkill() {
         <div className="relative mx-auto max-w-7xl h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
       
               {/* Foto profil */}
-              <Image
+              <Image 
                 src="/expertise2.png"
                 alt="Yudhi C Andres"
                 fill
@@ -128,7 +129,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500 py-0">
+              <p className={`${styles.pageTitleDescription}`}>
                 Proficiency in Indonesian and English for workplace communication and continuous learning.
               </p>
 
@@ -172,7 +173,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500 py-0">
+              <p className={`${styles.pageTitleDescription}`}>
                 Technical competencies in manufacturing processes, quality management, and 
                 digital solution development to drive operational excellence.
               </p>
@@ -245,7 +246,7 @@ export default function MySkill() {
                 </h2>
               </div>
 
-              <p className="mt-5 leading-7 text-gray-500 py-0">
+              <p className={`${styles.pageTitleDescription}`}>
                 A continuous journey of learning, engineering, and
                 building impactful technology solutions for industry.
               </p>

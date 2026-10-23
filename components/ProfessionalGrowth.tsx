@@ -203,7 +203,6 @@ export default function ProfessionalGrowth() {
             </div>
         </div>
         <div className="relative mx-auto max-w-7xl h-[300px] w-[300px] md:h-[400px] md:w-[400px]">
-      
               {/* Foto profil */}
               <Image
                 src="/book.webp"
@@ -213,7 +212,6 @@ export default function ProfessionalGrowth() {
                 className="object-contain relative x-2 y-20 z-10"
                 priority
               />
-      
         </div>
       </section>    
       <section
@@ -303,11 +301,11 @@ export default function ProfessionalGrowth() {
                     </div>
 
                     <div>
-                      <h3 className="mb-2 text-lg font-semibold text-white">
+                      <h3 className={`${styles.h3GrowthDescription}`}>
                         Key Projects
                       </h3>
 
-                      <div className="text-sm text-muted-foreground">
+                      <div className={`${styles.selectedDescription}`}>
                         <ol className="list-decimal pl-5 text-white space-y-1">
                           {selectedStage.keyproject.map((project, idx) => (
                             <li key={idx}>{project}</li>
@@ -324,11 +322,11 @@ export default function ProfessionalGrowth() {
                     </div>
 
                     <div>
-                      <h3 className="mb-2 text-lg font-semibold text-white">
+                      <h3 className={`${styles.h3GrowthDescription}`}>
                         Achievements
                       </h3>
 
-                      <div className="text-sm text-muted-foreground">
+                      <div className={`${styles.selectedDescription}`}>
                         <ol className="list-decimal pl-5 text-white space-y-1">
                           {selectedStage.achievement.map((item, idx) => (
                             <li key={idx}>{item}</li>
@@ -339,7 +337,6 @@ export default function ProfessionalGrowth() {
                   </div>
             </div>
           </div>
-        
       </section>
       )}
     </>
