@@ -38,6 +38,7 @@ export const styles = {
     mt-5
     leading-7
     text-gray-500
+    
   `,
   timeLineMarker:`
     flex 

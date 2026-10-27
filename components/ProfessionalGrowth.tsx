@@ -216,8 +216,9 @@ export default function ProfessionalGrowth() {
       </section>    
       <section
         id="growth"
-        className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-1 md:px-12 -mt-10"
+        className="grid min-h-[100px] items-center gap-5 px-6 py-0 md:grid-cols-1 md:px-12 -mt-10"
       > 
+          <div className ="absolute w-50 h-5  items-center justify-center gap-1 md:bg-lime-200"></div>
 
           {/* Horizontal Timeline */}
           <div className="relative">
@@ -274,11 +275,13 @@ export default function ProfessionalGrowth() {
           className="grid min-h-[100px] items-center gap-10 px-6 py-0 md:grid-cols-1 md:px-12 animate-in fade-in"
         >
           {/* Horizontal Timeline */}
+          
           <div className="relative bg-lime-600 rounded-xl p-5">
-            <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-2">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-2">
               
                   {/* Item 1 */}
-                  <div className="flex gap-2">
+                  <div className="flex gap-2.
+                  ">
                     <div className="flex h-40 w-40 items-center justify-center rounded-xl ">
                       <Clipboard className="h-25 w-25 text-white [stroke-width:1]" />
                     </div>
