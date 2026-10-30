@@ -44,3 +44,41 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(0,255,255,.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,.15) 1px, transparent 1px);
+
+  background-size: 24px 24px;
+
+  transform-origin: center;
+}
+
+.group:hover .grid-bg {
+  animation: futuristic-wave 0.4s ease-out infinite;
+}
+
+@keyframes futuristic-wave {
+  0% {
+    transform:
+      perspective(500px)
+      rotateX(75deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      perspective(500px)
+      rotateX(75deg)
+      scale(1.04)
+      translateY(-8px);
+  }
+
+  100% {
+    transform:
+      perspective(500px)
+      rotateX(75deg)
+      scale(1);
+  }
+}

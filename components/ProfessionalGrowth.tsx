@@ -20,6 +20,7 @@ const growthStages = [
     Period: "2005",
     position: "Graduated From High School",
     jobrole: "Fresh Graduated",
+    company: "SMAN 1 CISARUA",
     description:
       "Graduated from high school with a strong foundation in mathematics, science, and problem-solving skills.",
     keyproject: [
@@ -39,6 +40,7 @@ const growthStages = [
     Period: "2007",
     position: "Sampling Inspector",
     jobrole: "Industrial Experience",
+    company: "PT.Astra Daihatsu Motor",
     description:
       "Performed dimensional and functional sampling inspections on production units, ensuring compliance with quality standards and inspection requirements.",
 
@@ -61,7 +63,7 @@ const growthStages = [
     Period: "2009",
     position: "Sampling Inspection Administration",
     jobrole: "Quality Data Management",
-
+    company: "PT.Astra Daihatsu Motor",
     description:
       "Managed quality inspection data, reporting activities, and digitalized manual inspection records using VBA-based automation.",
 
@@ -84,7 +86,7 @@ const growthStages = [
     Period: "2012",
     position: "Sampling Inspection Team Leader",
     jobrole: "Process Improvement & Team Leadership",
-
+    company: "PT.Astra Daihatsu Motor",
     description:
       "Led inspection team activities, standardized quality processes, and developed cost-effective digital solutions to improve reporting, documentation, and process control.",
 
@@ -107,7 +109,7 @@ const growthStages = [
     Period: "2016",
     position: "Quality Project Staff",
     jobrole: "New Model & Quality Development",
-
+    company: "PT.Astra Daihatsu Motor",
     description:
       "Supported new model development activities, production readiness, and quality issue resolution to ensure smooth project launches and manufacturing quality compliance.",
 
@@ -130,7 +132,7 @@ const growthStages = [
     Period: "2022",
     position: "Quality Digital Solutions Engineer",
     jobrole: "Digital Transformation & Solution Engineering",
-
+    company: "PT.Astra Daihatsu Motor",
     description:
       "Designed and implemented digital quality solutions, optimizing ATS Inspect workflows, user experience, and system integration to support manufacturing quality operations.",
 
@@ -153,7 +155,7 @@ const growthStages = [
     Period: "Now",
     position: "Quality Digital Solutions Engineer",
     jobrole: "AI-Driven Quality Innovation",
-
+    company: "PT.Astra Daihatsu Motor",
     description:
       "Driving the integration of AI-powered inspection solutions with manufacturing quality systems to improve inspection efficiency, reduce implementation costs, and accelerate digital transformation.",
 
@@ -216,12 +218,13 @@ export default function ProfessionalGrowth() {
       </section>    
       <section
         id="growth"
-        className="grid min-h-[100px] items-center gap-5 px-6 py-0 md:grid-cols-1 md:px-12 -mt-10"
+        className=" grid min-h-[100px] items-center gap-5 px-6 py-0 md:grid-cols-1 md:px-12 -mt-10"
       > 
-          <div className ="absolute w-50 h-5  items-center justify-center gap-1 md:bg-lime-200"></div>
+          
 
           {/* Horizontal Timeline */}
           <div className="relative">
+            
             {/* Connecting Line */}
             <div className="absolute left-0 right-16 top-12 hidden border-t-2 border-dashed border-lime-400 md:block " />
             <div className="absolute right-0 top-12 -translate-y-1/2">
@@ -277,6 +280,7 @@ export default function ProfessionalGrowth() {
           {/* Horizontal Timeline */}
           
           <div className="relative bg-lime-600 rounded-xl p-5">
+            <div className ="absolute w-75 h-8 -top-4 left-3 flex rounded-lg font-poppins uppercase font-bold text-xm text-gray-700 text-center items-center justify-center gap-1 md:bg-gray-200 shadow-lg">{selectedStage.company}</div>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-2">
               
                   {/* Item 1 */}

@@ -19,7 +19,7 @@ import ProfileCard from "@/components/ProfileCard";
 import Navbar from "@/components/NavigationBar";
 import TestingTail from "@/components/TestingTail";
 import {styles} from "../config/styles";
-
+import FuturisticCard from "@/components/FuturisticCard";
 
 export default function Home() {
   return (
@@ -155,7 +155,8 @@ export default function Home() {
       </section>
       
       <ProfessionalGrowth />
-      <MySkill /> 
+      <MySkill />
+     
       
       {/* PROJECTS */}
       <section id="projects" className="bg-[#20231f] px-6 py-25 text-white md:px-12">
